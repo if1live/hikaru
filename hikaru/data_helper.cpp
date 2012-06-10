@@ -42,7 +42,7 @@ std::string DataHelper::MemberAttributeDesc(const MemberAttribute &attr) {
     const vector<string> &enum_list = attr.str_enum_list();
     for(size_t i = 0 ; i < enum_list.size() ; i++) {
       oss << enum_list[i];
-      if(i != enum_list.size()) {
+      if(i != enum_list.size()-1) {
         oss << "|";
       }
     }
@@ -52,6 +52,24 @@ std::string DataHelper::MemberAttributeDesc(const MemberAttribute &attr) {
 }
 void DataHelper::DumpMemberAttribute(const MemberAttribute &attr) {
   string str = MemberAttributeDesc(attr);
+  std::cout << str << std::endl;
+}
+
+std::string DataHelper::ClassAttributeDesc(const ClassAttribute &attr) {
+  ostringstream oss;
+  //name version
+  oss << attr.family_name() << ":" << attr.version() << "\n";
+  auto it = attr.begin();
+  auto endit = attr.end();
+  for( ; it != endit ; ++it) {
+    string str = MemberAttributeDesc(*it);
+    oss << "  " << str << "\n";
+  }
+  return oss.str();
+}
+
+void DataHelper::DumpClassAttribute(const ClassAttribute &attr) {
+  string str = ClassAttributeDesc(attr);
   std::cout << str << std::endl;
 }
 } //namespace hikaru

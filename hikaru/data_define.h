@@ -1,14 +1,12 @@
 ﻿// Ŭnicode please
 #pragma once
 
-#include "util.h"
 #include <string>
 #include <vector>
 #include "class_attribute.h"
 
 namespace hikaru {;
 struct BaseData {
-  typedef hikaru::RSHash HashFunction;
   BaseData(unsigned int class_code)
     : class_code_(class_code) {}
   virtual ~BaseData() {}

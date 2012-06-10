@@ -1,7 +1,6 @@
 ﻿// Ŭnicode please
 #include "hikaru_stdafx.h"
 #include "class_attribute.h"
-#include "util.h"
 
 using namespace std;
 

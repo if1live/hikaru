@@ -6,6 +6,9 @@
 using namespace std;
 
 namespace hikaru {;
+
+const int kInvalidVersion = -1;
+
 ClassDict &ClassDict::GetInstance() {
   static ClassDict ctx;
   return ctx;
@@ -44,7 +47,7 @@ int ClassDict::GetLatestVersion(const std::string &family_name) const {
   auto equal_range = class_attr_dict_.equal_range(family_name);
   auto it = equal_range.first;
   auto endit = equal_range.second;
-  int high_version = -99999;
+  int high_version = kInvalidVersion;
   for( ; it != endit ; it++) {
     if(it->second->version() > high_version) {
       high_version = it->second->version();
@@ -72,4 +75,25 @@ bool ClassDict::SetLatestVersion(const std::string &family_name, int version) {
   latest_version_dict_[family_name] = version;
   return true;
 }
+
+ClassAttribute *ClassDict::GetClassAttribute(const std::string &family_name, int version) {
+  auto equal_range = class_attr_dict_.equal_range(family_name);
+  auto it = equal_range.first;
+  auto endit = equal_range.second;
+  for( ; it != endit ; ++it) {
+    if(it->second->version() == version) {
+      return it->second;
+    }
+  }
+  return NULL;
+}
+
+ClassAttribute *ClassDict::GetLatestVersionClassAttribute(const std::string &family_name) {
+  int version = GetLatestVersion(family_name);
+  if(version == kInvalidVersion) {
+    return NULL;
+  }
+  return GetClassAttribute(family_name, version);
+}
+
 } //namespace hikaru

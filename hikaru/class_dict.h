@@ -14,6 +14,9 @@ public:
   bool Register(ClassAttribute *class_attr);
   int GetLatestVersion(const std::string &family_name) const;
   bool SetLatestVersion(const std::string &family_name, int version);
+
+  ClassAttribute *GetLatestVersionClassAttribute(const std::string &family_name);
+  ClassAttribute *GetClassAttribute(const std::string &family_name, int version);
 private:
   //key : family 
   std::multimap<std::string, ClassAttribute*> class_attr_dict_;

@@ -3,6 +3,7 @@
 #include "data_helper.h"
 #include "class_dict.h"
 #include "class_attribute.h"
+#include "data_define.h"
 
 using namespace std;
 using namespace hikaru;
@@ -18,4 +19,20 @@ TEST(DataHelper, MemberAttributeDesc) {
   attr2.AddStringEnum("c");
   DataHelper::DumpMemberAttribute(attr2);
   
+}
+
+TEST(DataHelper, ClassAttributeDesc) {
+  /*
+  typedef SampleData_family<1> DataType;
+  auto type_info = TypeInfo<DataType>();
+  ClassAttribute class_attr(type_info);
+  DataHelper::DumpClassAttribute(class_attr);
+  */
+
+  ClassDict &class_dict = ClassDict::GetInstance();
+  ClassAttribute *class_attr = class_dict.GetLatestVersionClassAttribute("SampleData");
+  DataHelper::DumpClassAttribute(*class_attr);
+
+  ClassAttribute *class_attr_1 = class_dict.GetClassAttribute("SampleData", 1);
+  DataHelper::DumpClassAttribute(*class_attr_1);
 }
