@@ -70,17 +70,29 @@
   <ItemGroup>
     <ClInclude Include="..\sdk\tinyxml\tinystr.h" />
     <ClInclude Include="..\sdk\tinyxml\tinyxml.h" />
+    <ClInclude Include="class_attribute.h" />
+    <ClInclude Include="class_dict.h" />
+    <ClInclude Include="data_define.h" />
+    <ClInclude Include="data_file.h" />
+    <ClInclude Include="data_helper.h" />
+    <ClInclude Include="global.h" />
     <ClInclude Include="hikaru_stdafx.h" />
+    <ClInclude Include="util.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\sdk\tinyxml\tinystr.cpp" />
     <ClCompile Include="..\sdk\tinyxml\tinyxml.cpp" />
     <ClCompile Include="..\sdk\tinyxml\tinyxmlerror.cpp" />
     <ClCompile Include="..\sdk\tinyxml\tinyxmlparser.cpp" />
+    <ClCompile Include="class_attribute.cpp" />
+    <ClCompile Include="class_dict.cpp" />
+    <ClCompile Include="data_define.cpp" />
+    <ClCompile Include="data_helper.cpp" />
     <ClCompile Include="hikaru_stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="util.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

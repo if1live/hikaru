@@ -18,6 +18,15 @@
     <ClInclude Include="hikaru_stdafx.h">
       <Filter>etc</Filter>
     </ClInclude>
+    <ClInclude Include="util.h" />
+    <ClInclude Include="data_define.h" />
+    <ClInclude Include="class_attribute.h" />
+    <ClInclude Include="global.h">
+      <Filter>etc</Filter>
+    </ClInclude>
+    <ClInclude Include="class_dict.h" />
+    <ClInclude Include="data_file.h" />
+    <ClInclude Include="data_helper.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\sdk\tinyxml\tinyxmlparser.cpp">
@@ -35,5 +44,10 @@
     <ClCompile Include="hikaru_stdafx.cpp">
       <Filter>etc</Filter>
     </ClCompile>
+    <ClCompile Include="util.cpp" />
+    <ClCompile Include="data_define.cpp" />
+    <ClCompile Include="class_attribute.cpp" />
+    <ClCompile Include="class_dict.cpp" />
+    <ClCompile Include="data_helper.cpp" />
   </ItemGroup>
 </Project>

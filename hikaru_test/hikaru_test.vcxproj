@@ -79,6 +79,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="class_attribute_test.cpp" />
+    <ClCompile Include="class_dict_test.cpp" />
+    <ClCompile Include="data_helper_test.cpp" />
     <ClCompile Include="hikaru_test_stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
