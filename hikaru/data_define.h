@@ -9,16 +9,14 @@
 namespace hikaru {;
 struct BaseData {
   typedef hikaru::RSHash HashFunction;
-  BaseData(unsigned int class_code, unsigned int family_code)
-    : class_code_(class_code), family_code_(family_code) {}
+  BaseData(unsigned int class_code)
+    : class_code_(class_code) {}
   virtual ~BaseData() {}
 
   unsigned int class_code() const { return class_code_; }
-  unsigned int family_code() const { return family_code_; }
 
 private:
   unsigned int class_code_;
-  unsigned int family_code_;
 };
 }
 
@@ -32,20 +30,11 @@ bool init_SampleData_1();
 template<>
 struct SampleData_family<1> : public hikaru::BaseData {
   //클래스 생성하면 같이 생성되는 부분
-  static const char *FamilyName() { const char *name = "SampleData"; return name; }
+  static const char *FamilyName() { static const char *name = "SampleData"; return name; }
   enum { version = 1 };
-  static unsigned int ClassCode() { const char *name = "SampleData""1"; return (unsigned int)name; }
-  static unsigned int FamilyCode() {
-    static bool run = false;
-    static unsigned int hash = 0;
-    if(run == false) {
-      run = true;
-      hash = HashFunction::Hash(FamilyName());
-    }
-    return hash;
-  }
+  static unsigned int ClassCode() { static const char *name = "SampleData""1"; return (unsigned int)name; }
 
-  SampleData_family() : BaseData(ClassCode(), FamilyCode()) {}
+  SampleData_family() : BaseData(ClassCode()) {}
   ~SampleData_family() {}
   
   int int_value;
@@ -57,20 +46,11 @@ typedef SampleData_family<2> SampleData;
 
 template<> 
 struct SampleData_family<2> : public hikaru::BaseData {
-  static const char *FamilyName() { const char *name = "SampleData"; return name; }
+  static const char *FamilyName() { static const char *name = "SampleData"; return name; }
   enum { version = 2 };
-  static unsigned int ClassCode() { const char *name = "SampleData""2"; return (unsigned int)name; }
-  static unsigned int FamilyCode() {
-    static bool run = false;
-    static unsigned int hash = 0;
-    if(run == false) {
-      run = true;
-      hash = HashFunction::Hash(FamilyName());
-    }
-    return hash;
-  }
+  static unsigned int ClassCode() { static const char *name = "SampleData""2"; return (unsigned int)name; }
 
-  SampleData_family() : BaseData(ClassCode(), FamilyCode()) {}
+  SampleData_family() : BaseData(ClassCode()) {}
   ~SampleData_family() {}
   
   float float_value;
@@ -112,19 +92,10 @@ struct SampleData_family<2> : public hikaru::BaseData {
   template<int> struct NAME##_family; \
   template<> struct NAME##_family<VERSION>; \
   template<> struct NAME##_family<VERSION> : public hikaru::BaseData { \
-  static const char *FamilyName() { const char *name = #NAME; return name; } \
+  static const char *FamilyName() { static const char *name = #NAME; return name; } \
     enum { version = VERSION }; \
-    static unsigned int ClassCode() { const char *name = #NAME; return (unsigned int)name; } \
-    static unsigned int FamilyCode() { \
-      static bool run = false; \
-      static unsigned int hash = 0; \
-      if(run == false) { \
-        run = true; \
-        hash = HashFunction::Hash(FamilyName()); \
-      } \
-      return hash; \
-    } \
-    NAME##_family() : BaseData(ClassCode(), FamilyCode()) {} \
+    static unsigned int ClassCode() { static const char *name = #NAME; return (unsigned int)name; } \
+    NAME##_family() : BaseData(ClassCode()) {} \
     ~NAME##_family() {}
 
 #define DECLARE_NEW_BEGIN(NAME, VERSION) \

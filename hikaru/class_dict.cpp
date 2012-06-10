@@ -26,9 +26,8 @@ bool ClassDict::Register(ClassAttribute *class_attr) {
   auto it = equal_range.first;
   auto endit = equal_range.second;
   for( ; it != endit ; it++) {
-    if(it->second->version() == class_attr->version()
-      && it->second->FamilyCode() == class_attr->FamilyCode()) {
-        return false;
+    if(it->second->ClassCode() == class_attr->ClassCode()) {
+      return false;
     }
   }
 

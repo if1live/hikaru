@@ -102,21 +102,18 @@ public:
 
   BaseData *Create() { return wrapper_->Create(); }
   unsigned int ClassCode() const { return wrapper_->ClassCode(); }
-  unsigned int FamilyCode() const { return wrapper_->FamilyCode(); }
 
 private:
   //실제 객체 생성과 같은것을 시킬수 있는 부분
   struct TypeWrapper {
     virtual BaseData *Create() const = 0;
     virtual unsigned int ClassCode() const = 0;
-    virtual unsigned int FamilyCode() const = 0;
   };
 
   template<typename T>
   struct TypeWrapperImpl : public TypeWrapper {
     BaseData *Create() const { return new T(); }
     unsigned int ClassCode() const { return T::ClassCode(); }
-    unsigned int FamilyCode() const { return T::FamilyCode(); }
   };
 
 private:

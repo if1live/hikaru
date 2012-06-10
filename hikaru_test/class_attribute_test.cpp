@@ -35,8 +35,7 @@ TEST(ClassAttribute, testing) {
 
     auto_ptr<BaseData> obj(class_attr.Create());
     EXPECT_EQ(DataType::ClassCode(), obj->class_code());
-    EXPECT_EQ(DataType::FamilyCode(), obj->family_code());
     EXPECT_EQ(DataType::ClassCode(), class_attr.ClassCode());
-    EXPECT_EQ(DataType::FamilyCode(), class_attr.FamilyCode());
+    EXPECT_EQ(DataType::FamilyName(), class_attr.family_name());
   }
 }
