@@ -96,4 +96,13 @@ ClassAttribute *ClassDict::GetLatestVersionClassAttribute(const std::string &fam
   return GetClassAttribute(family_name, version);
 }
 
+std::vector<ClassAttribute*> ClassDict::GetTotalData() const {
+  vector<ClassAttribute*> result;
+  auto it = class_attr_dict_.begin();
+  auto endit = class_attr_dict_.end();
+  for( ; it != endit ; ++it) {
+    result.push_back(it->second);
+  }
+  return result;
+}
 } //namespace hikaru

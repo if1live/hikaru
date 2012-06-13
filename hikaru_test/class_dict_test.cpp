@@ -27,3 +27,14 @@ TEST(ClassDict, test) {
   EXPECT_EQ(true, class_dict.SetLatestVersion(SampleData::FamilyName(), 2));
   EXPECT_EQ(2, class_dict.GetLatestVersion(SampleData::FamilyName()));
 }
+
+TEST(ClassAttribute, GetClassAttribute) {
+  ClassDict &class_dict = ClassDict::GetInstance();
+  ClassAttribute *class_attr = class_dict.GetLatestVersionClassAttribute("SampleData");
+  EXPECT_EQ(2, class_attr->version());
+  EXPECT_STREQ("SampleData", class_attr->family_name().c_str());
+
+  ClassAttribute *class_attr_1 = class_dict.GetClassAttribute("SampleData", 1);
+  EXPECT_EQ(1, class_attr_1->version());
+  EXPECT_STREQ("SampleData", class_attr_1->family_name().c_str());
+}

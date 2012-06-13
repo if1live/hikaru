@@ -72,4 +72,21 @@ void DataHelper::DumpClassAttribute(const ClassAttribute &attr) {
   string str = ClassAttributeDesc(attr);
   std::cout << str << std::endl;
 }
+
+std::string DataHelper::ClassDictDesc(const ClassDict &dict) {
+  ostringstream oss;
+  vector<ClassAttribute*> class_attr_list = dict.GetTotalData();
+  auto it = class_attr_list.begin();
+  auto endit = class_attr_list.end();
+  for( ; it != endit ; ++it) {
+    ClassAttribute *class_attr = *it;
+    oss << ClassAttributeDesc(*class_attr);
+  }
+  return oss.str();
+}
+
+void DataHelper::DumpClassDict(const ClassDict &dict) {
+  string str = ClassDictDesc(dict);
+  std::cout << str << std::endl;
+}
 } //namespace hikaru

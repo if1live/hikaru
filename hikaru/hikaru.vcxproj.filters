@@ -26,6 +26,7 @@
     <ClInclude Include="class_dict.h" />
     <ClInclude Include="data_file.h" />
     <ClInclude Include="data_helper.h" />
+    <ClInclude Include="data_init.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\sdk\tinyxml\tinyxmlparser.cpp">
@@ -47,5 +48,6 @@
     <ClCompile Include="class_attribute.cpp" />
     <ClCompile Include="class_dict.cpp" />
     <ClCompile Include="data_helper.cpp" />
+    <ClCompile Include="data_init.cpp" />
   </ItemGroup>
 </Project>

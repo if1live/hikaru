@@ -92,7 +92,7 @@ struct SampleData_family<2> : public hikaru::BaseData {
   template<> struct NAME##_family<VERSION> : public hikaru::BaseData { \
   static const char *FamilyName() { static const char *name = #NAME; return name; } \
     enum { version = VERSION }; \
-    static unsigned int ClassCode() { static const char *name = #NAME; return (unsigned int)name; } \
+    static unsigned int ClassCode() { static const char *name = #NAME#VERSION; return (unsigned int)name; } \
     NAME##_family() : BaseData(ClassCode()) {} \
     ~NAME##_family() {}
 

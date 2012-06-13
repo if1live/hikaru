@@ -17,6 +17,8 @@ public:
 
   ClassAttribute *GetLatestVersionClassAttribute(const std::string &family_name);
   ClassAttribute *GetClassAttribute(const std::string &family_name, int version);
+
+  std::vector<ClassAttribute*> GetTotalData() const;
 private:
   //key : family 
   std::multimap<std::string, ClassAttribute*> class_attr_dict_;
