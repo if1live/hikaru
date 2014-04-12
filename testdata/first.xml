@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stage version="4">
+  <properties>
+    <property name="background" value="back01.png"/>
+    <property name="height" value="480"/>
+    <property name="start_x" value="0"/>
+    <property name="start_y" value="0"/>
+    <property name="width" value="320"/>
+  </properties>
+  <comment_list>
+	<comment>
+        <properties>
+          <property name="name" value="comment6"/>
+          <property name="size" value="20"/>
+        </properties>
+        <text>Slice to drop</text>
+        <rect top="393.952" left="110.493" width="161.667" height="36.6667"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment1"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="252.55" left="149.935" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment2"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="240.418" left="146.307" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment3"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="228.208" left="142.873" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment4"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="215.828" left="139.609" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment14"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="191.009" left="132.012" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment15"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="166.419" left="125.314" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment16"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="203.141" left="135.64" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment17"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="178.799" left="128.578" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment18"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="339.875" left="174.95" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment19"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="278.256" left="157.22" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment20"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="302.598" left="164.283" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment21"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="315.284" left="168.252" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment22"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="352.007" left="178.578" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment23"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="265.875" left="153.957" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment24"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="290.466" left="160.655" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment25"/>
+          <property name="size" value="10"/>
+        </properties>
+        <text>/</text>
+        <rect top="327.665" left="171.516" width="12.8378" height="14.7913"/>
+      </comment>
+      <comment>
+        <properties>
+          <property name="name" value="comment26"/>
+          <property name="size" value="20"/>
+        </properties>
+        <text> the cheese!</text>
+        <rect top="371.833" left="136.5" width="125" height="26.6667"/>
+      </comment>
+  </comment_list>
+  
+  <entity_list>
+	<PolyBlockHeader_v1 base="PolyBlockHeader" version="1">
+	  <name>block17</name>
+	  <polygon>110.833,331.667,115.833,270,104.167,218.333,121.667,199.167,200,199.167,192.5,235.833,200,304.167
+	  </polygon>
+    </PolyBlockHeader_v1>
+	<PolyBlockHeader_v1 base="PolyBlockHeader" version="1">
+      <name>block18</name>
+	  <polygon>139.523,198.772,146.707,181.387,161.568,181.387,168.571,198.772</polygon>
+	</PolyBlockHeader_v1>
+  </entity_list>
+</stage>
