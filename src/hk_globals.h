@@ -1,0 +1,23 @@
+﻿// Ŭnicode please
+
+#ifndef __HK_GLOBAL_H__
+#define __HK_GLOBAL_H__
+
+#define NAMESPACE_HIKARU_BEGIN namespace hikaru {
+#define NAMESPACE_HIKARU_END }
+
+NAMESPACE_HIKARU_BEGIN
+
+typedef enum {
+	HK_ATTRIBUTE_NONE,
+	HK_ATTRIBUTE_BOOL,
+	HK_ATTRIBUTE_STRING,
+	HK_ATTRIBUTE_INT,
+	HK_ATTRIBUTE_FLOAT,
+} attribute_t;
+
+
+NAMESPACE_HIKARU_END
+
+#endif
+

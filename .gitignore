@@ -1,3 +1,4 @@
+######################
 # CMake + VisualStudio
 CMakeCache.txt
 CMakeFiles
@@ -184,3 +185,8 @@ FakesAssemblies/
 
 *.vcxproj
 *.filters
+
+
+###############
+# Auto-generate
+test/catch.hpp
