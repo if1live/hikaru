@@ -1,6 +1,13 @@
-sudo: false
-
 language: cpp
+
+sudo: required
+
+addons:
+  apt:
+    source:
+      - sourceline: 'ppa:george-edison55/cmake-3.x'
+    packages:
+      - cmake
 
 compiler:
   - clang
