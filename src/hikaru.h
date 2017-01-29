@@ -2,10 +2,13 @@
 #define __HIKARU_H__
 
 #include <string>
+#include <cstring>
 #include <unordered_map>
+#include <vector>
 #include <memory>
 #include <set>
 #include <cassert>
+#include <cstddef>
 
 namespace hikaru {
     enum AttributeType {
