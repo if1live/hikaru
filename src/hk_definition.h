@@ -23,16 +23,16 @@ hikaru::ClassAttribute class_attr("HKDemoStruct", "HKDemoStruct", 1);
     typedef BASE##_##VERSION cls;   \
     hikaru::ClassAttribute class_attr(#BASE, #BASE "_" #VERSION, VERSION);
 #if HIKARU_DEV
-    class_attr.add(hikaru::FieldAttribute::createInt("int_val", offsetof(cls, int_val)));
+    class_attr.add(hikaru::FieldAttribute::createInt("int_val", hikaru::offsetOf(&cls::int_val)));
 #endif
 #define HK_STRUCT_VAR_INT(NAME) \
-    class_attr.add(hikaru::FieldAttribute::createInt(#NAME, offsetof(cls, NAME)));
+    class_attr.add(hikaru::FieldAttribute::createInt(#NAME, hikaru::offsetOf(&cls::NAME)));
 
 #if HIKARU_DEV
-    class_attr.add(hikaru::FieldAttribute::createFloat("float_val", offsetof(cls, float_val)));
+    class_attr.add(hikaru::FieldAttribute::createFloat("float_val", hikaru::offsetOf(&cls::float_val)));
 #endif
 #define HK_STRUCT_VAR_FLOAT(NAME)   \
-    class_attr.add(hikaru::FieldAttribute::createFloat(#NAME, offsetof(cls, NAME)));
+    class_attr.add(hikaru::FieldAttribute::createFloat(#NAME, hikaru::offsetOf(&cls::NAME)));
 
 #if HIKARU_DEV 
     hikaru::ClassDict::getInstance().add(class_attr);

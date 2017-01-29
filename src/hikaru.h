@@ -19,6 +19,12 @@ namespace hikaru {
         // String,
     };
 
+    // http://stackoverflow.com/questions/13180842/how-to-calculate-offset-of-a-class-member-at-compile-time
+    template<typename T, typename U> constexpr size_t offsetOf(U T::*member)
+    {
+        return (char*)&((T*)nullptr->*member) - (char*)nullptr;
+    }
+
 
     struct RSHash {
         static unsigned int Hash(const char *str) {
