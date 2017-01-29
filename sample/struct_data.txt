@@ -1,0 +1,9 @@
+﻿HK_STRUCT_NEW_BEGIN(HKDemoStruct, 2)
+    HK_STRUCT_VAR_INT(int_val)
+	HK_STRUCT_VAR_FLOAT(float_val)
+HK_STRUCT_END()
+
+HK_STRUCT_BEGIN(HKDemoStruct, 1)
+    HK_STRUCT_VAR_FLOAT(float_val)
+    HK_STRUCT_VAR_INT(int_val)
+HK_STRUCT_END()

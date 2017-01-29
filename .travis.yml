@@ -1,0 +1,14 @@
+sudo: false
+
+language: cpp
+
+compiler:
+  - clang
+  - gcc
+
+script:
+  - mkdir build
+  - cd build
+  - cmake .. && make
+  - ./hikaru_test
+  - ./hikaru_sample
